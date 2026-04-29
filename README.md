@@ -411,26 +411,27 @@ Permite abrir un archivo externo y leer su contenido.
 `#include <fstream>`
 
 **Básicos**
-- `ofstream` → para escribir en archivos
-- `ios::in` → leer
-- `ios::out` → escribir
-- `ios::binary` → modo binario (NO texto)
+* `ofstream` → para escribir en archivos
+* `ios::in` → leer
+* `ios::out` → escribir
+* `ios::binary` → modo binario (NO texto)
 
-- `ifstream` → leer
-- `ofstream` → escribir
-- `fstream`  → leer y escribir
+* `ifstream` → leer
+* `ofstream` → escribir
+* `fstream`  → leer y escribir
 
-- `archivo.seekp(0);` → mueve puntero de escritura dentro de un archivo, en este caso al inicio
-- `archivo.seekp(5 * sizeof(DatosCliente));` → Se mueve al registro 5
-- `reinterpret_cast<char*>(&cliente)` → Convierte el struct en una dirección de memoria tipo char* (esto es obligatorio para trabajar con binarios)
-- `strncpy(apellidoPaterno, valorApellidoPaterno, longitud);` → Copia texto de un string a un arreglo de caracteres,se usa por Porque en archivos binarios muchas veces se usan char y no strings  
-- `nombre[19] = '\0';` → Es el fin de cadena en C/C++. Las cadenas tipo char[] funcionan así: `'A' 'n' 'a' '\0'` el siguiente ejemplo `char nombre[20] = "Ana";`en memoria guarda: `[A][n][a][\0][?][?][?]...[?]` ayuda a que no imprima basura. Si tengo `char nombre[20];`la última posición es `nombre[19]` y debo `nombre[19] = '\0';`
+* `archivo.seekp(0);` → mueve puntero de escritura dentro de un archivo, en este caso al inicio
+* `archivo.seekp(5 * sizeof(DatosCliente));` → Se mueve al registro 5
+* `reinterpret_cast<char*>(&cliente)` → Convierte el struct en una dirección de memoria tipo char* (esto es obligatorio para trabajar con binarios)
+* `strncpy(apellidoPaterno, valorApellidoPaterno, longitud);` → Copia texto de un string a un arreglo de caracteres,se usa por Porque en archivos binarios muchas veces se usan char y no strings  
+* `nombre[19] = '\0';` → Es el fin de cadena en C/C++. Las cadenas tipo char[] funcionan así: `'A' 'n' 'a' '\0'` el siguiente ejemplo `char nombre[20] = "Ana";`en memoria guarda: `[A][n][a][\0][?][?][?]...[?]` ayuda a que no imprima basura. Si tengo `char nombre[20];`la última posición es `nombre[19]` y debo `nombre[19] = '\0';`
+
 **Por qué char y no string?**
 Se usa char[] porque permite manejar directamente la memoria, lo cual es necesario en:
 
-- archivos binarios
-- estructuras (struct)
-- funciones
+* archivos binarios
+* estructuras (struct)
+* funciones
 
 `string nombre = "Ana";`es una clase, maneja la memoria automáticamente.
 
