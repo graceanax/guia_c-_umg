@@ -133,6 +133,63 @@ ifstream archivo("entrada.txt");
 ofstream archivo("salida.txt");
 
 ```
+## Foreach
+Es una forma simplificada de recorrer estructuras como:
+* arreglos
+* vectores
+* strings
+*  listas
+
+
+**Ejemplo:**
+``` c++
+vector<int> numeros = {10, 20, 30};
+
+for (int n : numeros) {
+    cout << n << endl;
+}
+
+// Ejemplo 2 
+int numeros[3] = {1, 2, 3};
+
+for (int n : numeros) {
+    cout << n << endl;
+}
+
+// Ejemplo 3
+string texto = "Ana";
+
+for (char c : texto) {
+    cout << c << endl;
+}
+
+// Ejemplo por referncia y constante mejor practica 
+for (const int &n : numeros) {
+    cout << n;
+}
+```
+
+## If ternario
+`condicion ? valor_si_verdadero : valor_si_falso;`
+
+**Ejemplo:**
+``` c++
+int a = 5, b = 10;
+
+int mayor = (a > b) ? a : b;
+
+cout << mayor;
+
+// Ejemplo 2
+cout << (nota >= 61 ? "Aprobado" : "Reprobado");
+
+// Ejemplo 3 
+int edad = 20;
+
+string resultado = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
+
+cout << resultado;
+```
 
 ## Switch
 Sirve para elegir entre varias opciones exactas.
@@ -653,15 +710,4 @@ public:
 // uso
 Persona p1("Ana");
 p1.mostrar();
-```
-
-
-**Ejemplo:**
-``` c++
-
-```
-
-**Ejemplo:**
-``` c++
-
 ```
