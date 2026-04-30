@@ -149,7 +149,7 @@ for (int n : numeros) {
     cout << n << endl;
 }
 
-// Ejemplo 2 
+// Ejemplo 2
 int numeros[3] = {1, 2, 3};
 
 for (int n : numeros) {
@@ -163,7 +163,7 @@ for (char c : texto) {
     cout << c << endl;
 }
 
-// Ejemplo por referncia y constante mejor practica 
+// Ejemplo por referncia y constante mejor practica
 for (const int &n : numeros) {
     cout << n;
 }
@@ -183,7 +183,7 @@ cout << mayor;
 // Ejemplo 2
 cout << (nota >= 61 ? "Aprobado" : "Reprobado");
 
-// Ejemplo 3 
+// Ejemplo 3
 int edad = 20;
 
 string resultado = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
@@ -412,10 +412,10 @@ void cambiar(int &x) {
     x = 100;
 }
 
-// función con vector 
+// función con vector
 void mostrar(vector<int> v);
 
-// función con vector por referencia 
+// función con vector por referencia
 void mostrar(vector<int> &v);
 
 // función con struct Estudiante
@@ -480,7 +480,7 @@ Permite abrir un archivo externo y leer su contenido.
 * `archivo.seekp(0);` → mueve puntero de escritura dentro de un archivo, en este caso al inicio
 * `archivo.seekp(5 * sizeof(DatosCliente));` → Se mueve al registro 5
 * `reinterpret_cast<char*>(&cliente)` → Convierte el struct en una dirección de memoria tipo char* (esto es obligatorio para trabajar con binarios)
-* `strncpy(apellidoPaterno, valorApellidoPaterno, longitud);` → Copia texto de un string a un arreglo de caracteres,se usa por Porque en archivos binarios muchas veces se usan char y no strings  
+* `strncpy(apellidoPaterno, valorApellidoPaterno, longitud);` → Copia texto de un string a un arreglo de caracteres,se usa por Porque en archivos binarios muchas veces se usan char y no strings
 * `nombre[19] = '\0';` → Es el fin de cadena en C/C++. Las cadenas tipo char[] funcionan así: `'A' 'n' 'a' '\0'` el siguiente ejemplo `char nombre[20] = "Ana";`en memoria guarda: `[A][n][a][\0][?][?][?]...[?]` ayuda a que no imprima basura. Si tengo `char nombre[20];`la última posición es `nombre[19]` y debo `nombre[19] = '\0';`
 
 **Por qué char y no string?**
@@ -611,7 +611,7 @@ cout << numero;
 
 // > Resultado: 20
 ```
-## Memoria dinámica 
+## Memoria dinámica
 Permite crear variables o arreglos durante la ejecución del programa.
 
 **Ejemplo con una variable:**
