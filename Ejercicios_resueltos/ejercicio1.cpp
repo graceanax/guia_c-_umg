@@ -13,8 +13,12 @@ y determine:
 using namespace std;
 
 int main () {
-  short int cantidad;
-  vector<int> numeros;
+  short int cantidad {0};
+  short int nPositivos {0};
+  double promPositivos {0};
+  short int nCeros {0};
+  short int nNegativos {0};
+  short int mayor {0};
 
   cout << "** Numeros **\n";
 
@@ -25,12 +29,28 @@ int main () {
     short int numero;
     cout << "Ingrese el numero: ";
     cin >> numero;
-    numeros.push_back(numero);
+    if (numero > 0) {
+      nPositivos += 1;
+      promPositivos += numero;
+    } else if (numero < 0) {
+      nNegativos += 1;
+    } else { 
+      nCeros += 1;
+    }
+    if (numero > mayor) {
+      mayor = numero;
+    }
   }
 
-  for (short int i=0; i<numeros.size(); i++ ) {
-    cout << numeros[i] << endl;
-  }
+  cout << "Cantidad positivos: " << nPositivos << "\n";
+  cout << "Promedio positivos: " << (promPositivos / nPositivos) << "\n";
+  cout << "Cantidad negativos: " << nNegativos << "\n";
+  cout << "Cantidad ceros: " << nCeros << "\n";
 
   return 0;
 }
+/*
+0
+245
+-1
+*/
