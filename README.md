@@ -20,7 +20,6 @@ Incluye:
 
 * `ifstream` → leer archivos
 * `ofstream` → escribir archivos
-* `fstream` → leer y escribir
 
 Ejemplo:
 
